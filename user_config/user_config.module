@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Contains user_config.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function user_config_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the user_config module.
+    case 'help.page.user_config':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('User related configurations') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function user_config_theme() {
+  return [
+    'user_config' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Undocumented function
+ * Hook_entity_operation
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @return void
+ */
+function user_config_entity_operation(\Drupal\Core\Entity\EntityInterface $entity) {
+  $operations = [];
+  if($entity->getEntityType()->Id() == 'user'){
+    $operations['user_config'] = [
+      'title' => t('Config'),
+      'url' => \Drupal\Core\Url::fromRoute('entity.user_config.type.user_config_form', ['user' => $entity->Id()]),
+      'weight' => 50,
+    ];
+  }
+  return $operations;
+}

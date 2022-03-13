@@ -1,0 +1,5 @@
+name: 'User Config'
+type: module
+description: 'User related configurations'
+core: 8.x
+package: 'Custom'

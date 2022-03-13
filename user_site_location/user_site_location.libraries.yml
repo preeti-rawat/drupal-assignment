@@ -1,0 +1,5 @@
+user-site-location-style:
+  version: 0
+  css:
+    theme:
+      css/user_site.css: {}

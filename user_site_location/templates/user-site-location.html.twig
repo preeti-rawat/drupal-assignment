@@ -1,0 +1,11 @@
+<!-- Add you custom twig html here -->
+{{ attach_library('user_site_location/user-site-location-style') }}
+<div class ="site-current-info-wrapper">
+    <div class ="location-info">
+        <b>{{ 'Location' |t }}</b>: {{ location }}
+    </div>
+    <div class ="location-info">
+        <b>{{ 'Time' |t }}</b>: {{ current_time }}
+    </div>
+</div>
+

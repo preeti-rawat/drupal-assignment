@@ -1,0 +1,5 @@
+entity.user_config.add_form:
+  route_name: entity.user_config.add_form
+  title: 'Add User config'
+  appears_on:
+    - entity.user_config.collection

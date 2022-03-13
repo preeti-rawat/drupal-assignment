@@ -1,0 +1,22 @@
+user_config.user_config.*:
+  type: config_entity
+  label: 'User config config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uid:
+      type: integer
+      label: 'User ID'
+    country:
+      type: string
+      label: 'Country'
+    city:
+      type: string
+      label: 'City'
+    timezone:
+      type: string
+      label: 'Timezone'

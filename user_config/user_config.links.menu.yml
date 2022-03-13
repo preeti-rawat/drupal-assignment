@@ -1,0 +1,8 @@
+
+# User config menu items definition
+entity.user_config.collection:
+  title: 'User config'
+  route_name: entity.user_config.collection
+  description: 'List User config (bundles)'
+  parent: system.admin_structure
+  weight: 99

@@ -1,0 +1,7 @@
+name: 'User Site Location'
+type: module
+description: 'Displays site location'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - user_config

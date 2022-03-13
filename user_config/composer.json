@@ -1,0 +1,13 @@
+{
+    "name": "user_config",
+    "type": "drupal-module",
+    "description": "User related configurations",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/user_config",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/user_config",
+        "source": "http://cgit.drupalcode.org/user_config",
+    },
+}

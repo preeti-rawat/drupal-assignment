@@ -1,0 +1,40 @@
+entity.user_config.collection:
+  path: '/admin/config/system/user_config'
+  defaults:
+    _entity_list: 'user_config'
+    _title: 'User Config configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.user_config.add_form:
+  path: '/admin/config/system/user_config/add'
+  defaults:
+    _entity_form: 'user_config.add'
+    _title: 'Add User Config'
+  requirements:
+    _permission: 'administer site configuration' 
+
+entity.user_config.edit_form:
+  path: '/admin/config/system/user_config/{user_config}'
+  defaults:
+    _entity_form: 'user_config.edit'
+    _title: 'Edit User Config'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.user_config.delete_form:
+  path: '/admin/config/system/user_config/{user_config}/delete'
+  defaults:
+    _entity_form: 'user_config.delete'
+    _title: 'Delete User Config'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.user_config.type.user_config_form:
+  path: '/user/{user}/user_config'
+  defaults: 
+    _controller: '\Drupal\user_config\Controller\UserConfigController::userConfigForm'
+    _title: 'User Config'
+  requirements:
+    _profile_access_check: 'user_config.edit'
+    _permission: 'administer site configuration'

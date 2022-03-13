@@ -1,0 +1,4 @@
+services:
+  user_site_location.data_handler:
+    class: Drupal\user_site_location\Service\SiteLocation
+    arguments: ['@database', '@current_user', '@entity_type.manager', '@datetime.time']
